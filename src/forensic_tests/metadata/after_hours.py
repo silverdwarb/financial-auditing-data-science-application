@@ -6,11 +6,11 @@ from datetime import time
 def run_test(
     df: pd.DataFrame,
     business_start: str = "08:00",
-    business_end: str = "17:00"
+    business_end: str = "18:00"
 ) -> pd.DataFrame:
     """
     Identifies journal entries containing posting lines entered
-    outside configured business hours on weekdays.
+    outside configured business hours, regardless of weekday.
 
     If any line in a journal entry qualifies, every line in that
     entry receives True.
@@ -59,13 +59,10 @@ def run_test(
             "entered_date contains missing or invalid values."
         )
 
-    # Identify weekday entries outside business hours.
+    # Identify entries outside configured business hours.
     outside_hours = (
-        (entered_dates.dt.day_of_week < 5)
-        & (
-            (entered_dates.dt.time < start)
-            | (entered_dates.dt.time >= end)
-        )
+        (entered_dates.dt.time < start)
+        | (entered_dates.dt.time >= end)
     )
 
     working_data = pd.DataFrame({

@@ -8,6 +8,7 @@ from src.forensic_tests.metadata import (
     after_hours,
     posting_timeliness,
     round_numbers,
+    promptly,
 )
 
 
@@ -39,6 +40,7 @@ def add_metadata(df: pd.DataFrame) -> pd.DataFrame:
         after_hours,
         posting_timeliness,
         round_numbers,
+        promptly,
     ]
 
     for module in metadata_modules:
