@@ -6,7 +6,7 @@
 
 The **financial-auditing-data-science-application** is a Python-based forensic accounting and data analytics project designed to identify potentially fraudulent or unusual journal entries through statistical analysis, anomaly detection, and network-based risk propagation.
 
-The project aims to explore how traditional audit procedures can be enhanced through data analytics and machine learning. Rather than relying on a single fraud detection method, the system will use multiple independent analytical techniques to identify risk indicators, assign risk scores, and prioritize journal entries for further investigation.
+The project aims to explore how traditional audit procedures can be enhanced through data analytics and machine learning. Rather than relying on a single fraud detection method, the system will use multiple independent analytical techniques to identify risk indicators, assign risk scores, and prioritize journal entries for further investigation in the context of other journal entries.
 
 The long-term goal is to move beyond evaluating individual transactions and explore how suspicious activity may propagate through an organization's financial relationships.
 
